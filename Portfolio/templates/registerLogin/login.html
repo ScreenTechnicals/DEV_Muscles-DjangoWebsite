@@ -1,0 +1,31 @@
+{% extends 'base.html' %} {% block title %}Register{% endblock title %} 
+{% block body %}
+<section id="Registeration">
+  <div class="container">
+    <h2>Login Now</h2>
+    <form action="/login/" method="POST" class="Reg-Form">
+    {% csrf_token %}
+      <div class="content_form">
+        <div class="left-f">
+          <label for="username">Username:</label>
+          <input type="text" name="username" required />
+          <label for="email">Email:</label>
+          <input type="email" name="r_email" required />
+        </div>
+        <div class="right-f">
+          <label for="password">Choose Password:</label>
+          <input type="password" name="password" required">
+          <label for="confirmpassword">Confirm Password:</label>
+          <input type="password" name="confirmpass" required />
+        </div>
+      </div>
+      <div class="btn_submit">
+          <input type="reset" value="Reset">
+          <input type="submit" value="Login">
+      </div>
+    </form>
+    <p class="para" style="text-align: center;">If not yet ,then <a href="/register/">Register</a></p>
+  </div>
+</section>
+
+{% endblock body %}

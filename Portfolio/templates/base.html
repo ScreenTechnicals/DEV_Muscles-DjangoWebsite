@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock title %}|Screen Teach.</title>
+    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="stylesheet" href="/static/css/reLog.css">
+    <link rel="stylesheet" href="/static/css/portf.css">
+    <link rel="stylesheet" href="/static/css/about.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+</head>
+<body>
+<!-- navigation -->  
+    <header>
+        <div id="logo">
+            <a href="/"><span>Dev</span><span>Muscles.</span></a>
+        </div>
+        <nav id="navbar">
+            <div id="quit">
+                <i class="fa fa-times" aria-hidden="true" onclick="toggle()"></i>
+            </div>
+            <ul>
+                <li><a href="/" class="{% block active1 %}{% endblock active1 %}">Home</a></li>
+                <li><a href="/portfolio"class="{% block active2 %}{% endblock active2 %}">Portfolio</a></li>
+                <li><a href="/about"class="{% block active3 %}{% endblock active3 %}">About</a></li>
+                <li><a href="/contact"class="{% block active4 %}{% endblock active4 %}">Contact</a></li>
+            </ul>
+        </nav>
+        <div id="bars" onclick="toggle()">
+            <div class="bar b"></div>
+            <div class="bar"></div>
+            <div class="bar b"></div>
+        </div>
+    </header>
+    {% block body %}{% endblock body %}
+    <script src="/static/js/main.js"></script>
+</body>
+</html>

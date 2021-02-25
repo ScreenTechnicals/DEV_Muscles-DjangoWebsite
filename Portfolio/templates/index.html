@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock title %}
+{% block active1 %}active{% endblock active1 %}
+{% block body %}
+<section id="home">
+    <div class="banner_content">
+        <div class="left">
+            <p>Welcome To</p>
+            <h1><span>Dev Muscles</span>, Transform Your Loose Muscles Into Hard Muscles.</h1>
+            <div class="btn_1">
+
+            {% if user.is_authenticated %}
+                <h3 class="l_out" style="cursor:default; display: inline-block;">Hello, {{user.first_name}}</h3>
+                <a href="/logout/" class="l_out">Logout</a>
+            {% else %}
+                <a href="/register">Resgiter</a>
+                <a href="/login" class="btn_login">Login</a>
+            {% endif %}
+            </div>
+            <div class="icons">
+                <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a>
+            </div>
+        </div>
+        <div class="right">
+            <div class="boxes">
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+{% endblock body %}

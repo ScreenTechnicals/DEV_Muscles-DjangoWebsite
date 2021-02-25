@@ -1,0 +1,116 @@
+:root {
+  --primary: rgb(0, 194, 0);
+  --linearGradient: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+}
+
+#Registeration {
+  width: 100%;
+  height: 100vh;
+  background: var(--linearGradient), url(/static/images/img4.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#Registeration .container {
+  color: #000;
+  width: 100%;
+  background-color: white;
+  width: 700px;
+  padding: 30px;
+  border-radius: 30px;
+}
+
+#Registeration .container h2 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+#Registeration .container .content_form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+#Registeration .container .content_form .left-f,
+#Registeration .container .content_form .right-f {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 0 30px;
+}
+
+#Registeration .container .content_form .left-f label,
+#Registeration .container .content_form .right-f label {
+  font-weight: bold;
+}
+
+#Registeration .container .content_form .left-f input,
+#Registeration .container .content_form .right-f input {
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #000;
+  margin-bottom: 20px;
+}
+
+#Registeration .container .btn_submit {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 10px;
+  padding-right: 20px;
+}
+
+#Registeration .container .btn_submit input {
+  border: none;
+  outline: none;
+  background-color: var(--primary);
+  padding: 10px 20px;
+  color: #fff;
+  font-size: 20px;
+  text-transform: capitalize;
+  cursor: pointer;
+  margin: 0 10px;
+  border-radius: 30px;
+}
+
+#Registeration .container .btn_submit input:hover {
+  background-color: #009914;
+}
+
+@media only screen and (max-width: 750px) {
+  #Registeration {
+    overflow-y: scroll;
+    padding: 30px;
+  }
+  #Registeration .container {
+    margin-top: 150px;
+    width: auto;
+  }
+  #Registeration .container .content_form {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+/*# sourceMappingURL=reLog.css.map */
